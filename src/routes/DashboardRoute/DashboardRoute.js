@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LanguageContext from '../../contexts/LanguageContext'
-import LanguageApiService from '../../services/lang-api-service';
+import LanguageApiService from '../../services/language-api-service';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom'
 
