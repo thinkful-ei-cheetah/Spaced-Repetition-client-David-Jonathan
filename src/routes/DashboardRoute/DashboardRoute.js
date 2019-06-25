@@ -29,8 +29,8 @@ class DashboardRoute extends Component {
           {words.map((word, index) => (
             <li key={index}>
               <h4>{word}</h4>
-              <p>correct answer count: {word.correctCount}</p>
-              <p>incorrect answer count: {word.incorrectCount}</p>
+              <p>correct answer count: {word.wordCorrectCount}</p>
+              <p>incorrect answer count: {word.wordIncorrectCount}</p>
             </li>
           ))}
         </ul>
