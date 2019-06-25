@@ -40,14 +40,17 @@ class RegistrationForm extends Component {
   render() {
     const { error } = this.state
     return (
+      <div className="max-w-md mx-auto">
       <form
         onSubmit={this.handleSubmit}
       >
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
-        <div>
-          <Label htmlFor='registration-name-input'>
+
+        <div class="mb-4">
+          <Label htmlFor='registration-name-input' className="block text-grey-darker text-sm font-bold mb-2" >
             Enter your name<Required />
           </Label>
           <Input
@@ -55,37 +58,50 @@ class RegistrationForm extends Component {
             id='registration-name-input'
             name='name'
             required
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
-        <div>
-          <Label htmlFor='registration-username-input'>
-            Choose a username<Required />
+
+        <div class="mb-4">
+          <Label htmlFor='registration-username-input' className="block text-grey-darker text-sm font-bold mb-2" >
+            Choose a Username<Required />
           </Label>
           <Input
+            ref={this.firstInput}
             id='registration-username-input'
             name='username'
             required
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
-        <div>
-          <Label htmlFor='registration-password-input'>
-            Choose a password<Required />
+
+        <div class="mb-4">
+          <Label htmlFor='registration-username-input' className="block text-grey-darker text-sm font-bold mb-2" >
+          Choose a password<Required />
           </Label>
           <Input
             id='registration-password-input'
             name='password'
             type='password'
             required
+            className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
           />
         </div>
+
         <footer>
-          <Button type='submit'>
-            Sign up
+        <div class="flex items-center justify-between">
+
+       <Button type='submit' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Sign Up
           </Button>
-          {' '}
-          <Link to='/login'>Already have an account?</Link>
+          <Link to='/login' className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+            Already have an account?
+            </Link>
+        </div>
         </footer>
+        </div>
       </form>
+      </div>
     )
   }
 }

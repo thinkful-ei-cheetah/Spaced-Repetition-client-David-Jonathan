@@ -17,8 +17,10 @@ class LoginRoute extends Component {
 
   render() {
     return (
-      <section>
-        <h2>Login</h2>
+      <section className="container mx-auto">
+            <p className="max-w-md mx-auto text-center text-2xl text-blue-800 pt-10 pb-10">
+         Login
+        </p>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
         />

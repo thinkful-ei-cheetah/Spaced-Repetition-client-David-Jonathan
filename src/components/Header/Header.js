@@ -41,14 +41,24 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <h1>
-          <Link to='/'>
+      <nav className="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
+        <div className="mb-2 sm:mb-0">
+        <Link to='/' className="text-2xl no-underline text-grey-darkest ">
+          
             Spaced repetition
-          </Link>
-        </h1>
+        </Link>
+    
+        </div>
+        <div>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
+        </div>
+      </nav>
+
+
+
+
       </header>
     );
   }
