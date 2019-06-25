@@ -5,6 +5,7 @@ import IdleService from '../services/idle-service'
 
 const UserContext = React.createContext({
   user: {},
+  languages: {},
   error: null,
   setError: () => {},
   clearError: () => {},
@@ -99,6 +100,11 @@ export class UserProvider extends Component {
       .catch(err => {
         this.setError(err)
       })
+  }
+
+  fetchUserLanguges = () => {
+    // call auth api to fetch languagegs
+    //  this.setState({ languages })
   }
 
   render() {
