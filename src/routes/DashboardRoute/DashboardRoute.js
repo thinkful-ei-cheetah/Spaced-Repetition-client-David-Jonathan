@@ -17,6 +17,7 @@ class DashboardRoute extends Component {
 
   render() {
     const { language, words = [] } = this.context;
+    console.log(language, words);
     return (
       <section>
         <div >
@@ -28,9 +29,9 @@ class DashboardRoute extends Component {
         <ul>
           {words.map((word, index) => (
             <li key={index}>
-              <h4>{word}</h4>
-              <p>correct answer count: {word.wordCorrectCount}</p>
-              <p>incorrect answer count: {word.wordIncorrectCount}</p>
+              <h4>{word.original}</h4>
+              <p>correct answer count: {word.correct_count}</p>
+              <p>incorrect answer count: {word.incorrect_count}</p>
             </li>
           ))}
         </ul>
