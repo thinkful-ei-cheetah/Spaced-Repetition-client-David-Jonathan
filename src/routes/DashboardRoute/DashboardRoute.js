@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import LanguageContext from '../../contexts/LanguageContext'
 import LanguageApiService from '../../services/language-api-service';
 import Button from '../../components/Button/Button';
+import Language from '../../components/Dashboard/Language';
+import Wordlist from '../../components/Dashboard/Wordlist';
 import { Link } from 'react-router-dom'
 
 class DashboardRoute extends Component {
@@ -19,26 +21,14 @@ class DashboardRoute extends Component {
     const { language, words = [] } = this.context;
     console.log(language, words);
     return (
-      <section>
-        <div >
-          <h2>{language.name}</h2>
-          <h2 >Total Correct Answers: {language.totalScore}</h2>
-          </div>
-        <h3>Words to learn</h3>
-        <div>
-        <ul>
-          {words.map((word, index) => (
-            <li key={index}>
-              <h4>{word.original}</h4>
-              <p>correct answer count: {word.correct_count}</p>
-              <p>incorrect answer count: {word.incorrect_count}</p>
-            </li>
-          ))}
-        </ul>
-        </div>
-        <Link to='/learn'>
-          <Button>Start Learning!</Button>
+      <section className="container mx-auto w-1/4 mt-8">
+        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <Language language={language}/>
+        <Wordlist words={words}/>
+        <Link className="text-center mt-6" to='/learn'>
+          <Button className="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Start Learning!</Button>
         </Link>
+        </div>
       </section>
     );
   }
