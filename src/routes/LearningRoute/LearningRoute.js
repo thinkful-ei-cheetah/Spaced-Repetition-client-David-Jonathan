@@ -36,9 +36,6 @@ class LearningRoute extends Component {
     })
       .then(res => {
         this.setState({ displayguess: false, value: '' })
-
-
-
         const { nextWord, wordCorrectCount, wordIncorrectCount, totalScore, answer, isCorrect } = res;
 
         const { language, words = []  } = this.context;
