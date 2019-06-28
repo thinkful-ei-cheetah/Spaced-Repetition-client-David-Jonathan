@@ -3,7 +3,7 @@ import React from 'react'
 export default function Wordlist({words}) {
   return (
     <div>
-    <h3 className="text-center bg-teal-100 px-4 py-2 m-2 mt-6">Words to learn</h3>
+    <h3 className="text-center bg-blue-400 text-1xl text-white font-bold py-2 px-4 rounded px-4 py-2 m-2 mt-6 border border-gray-500">Words to learn</h3>
     <div>
     <ul>
       {words.map((word, index) => (
