@@ -64,7 +64,7 @@ class RegistrationForm extends Component {
 
             <div className="mb-4">
               <Label htmlFor='registration-username-input' className="block text-grey-darker text-sm font-bold mb-2" >
-                Choose a Username<Required />
+                Choose a username<Required />
               </Label>
               <Input
                 ref={this.firstInput}
@@ -76,7 +76,7 @@ class RegistrationForm extends Component {
             </div>
 
             <div className="mb-4">
-              <Label htmlFor='registration-username-input' className="block text-grey-darker text-sm font-bold mb-2" >
+              <Label htmlFor='registration-password-input' className="block text-grey-darker text-sm font-bold mb-2" >
                 Choose a password<Required />
               </Label>
               <Input
@@ -92,8 +92,8 @@ class RegistrationForm extends Component {
               <div className="flex items-center justify-between">
 
                 <Button type='submit' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                  Sign Up
-          </Button>
+                  Sign up
+                </Button>
                 <Link to='/login' className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
                   Already have an account?
             </Link>
