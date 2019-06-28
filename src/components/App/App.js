@@ -22,7 +22,7 @@ export default class App extends Component {
   render() {
     const { hasError } = this.state
     return (
-      <div className='App'>
+      <div className='bg-blue-100 h-screen'>
         <Header />
         <main>
           {hasError && (

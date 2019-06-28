@@ -100,7 +100,7 @@ class LearningRoute extends Component {
       <div>
     <CSSTransition in={this.state.dummy2} timeout={800} classNames="my-node">
           <div>
-            <div className="bg-gray-100 clearfix mt-20">
+            <div className="bg-gray-100 clearfix mt-10">
                 <div className="float-left text-gray-700  bg-gray-200 px-4 py-2 m-2">
                 {this.state.nextWord}
                 </div>
@@ -118,7 +118,7 @@ class LearningRoute extends Component {
                     Type your answer below
                 </Label>
                 <input type="text" name='guess2'  />
-                <textarea id='learn-guess-input'  value={this.state.value} onChange={this.handleChange} className="mt-8 w-full border border-grey-500 text-center block text-grey-darker text-sm font-bold mb-2"  />
+                <textarea id='learn-guess-input'  value={this.state.value} rows="1" onChange={this.handleChange} className="mt-4 p-4 w-full border border-grey-500 text-center block text-grey-darker text-md  mb-2"  />
                 <div className="text-center mt-6">
                   <Button  type='submit' className="inline-block text-center bg-blue-500  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                       Submit Your Answer
@@ -155,13 +155,19 @@ class LearningRoute extends Component {
 
       {this.state.displayguess === false && this.state.isCorrect === false &&
 
-      <div className="bg-gray-100 clearfix mt-20">
-          <div className="float-left text-gray-700  bg-gray-200 px-4 py-2 m-2">
-          Sorry the correct answer is {this.state.answer}
-          </div>
-          <Button onClick={this.handleResetGuess} className="w-full text-center bg-blue-500  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                Next Word
-            </Button>
+      <div className="">
+              <div className="text-center bg-red-400 text-3xl text-white font-bold mt-12 rounded px-4 py-2 m-2">
+              Nein!
+              </div>
+
+              <div className="text-center bg-grey-400 text-1xl font-bold rounded px-4 py-2 border border-gray-500 m-2">
+              Correct answer is: {this.state.answer}
+              </div>
+              <div className="text-center mt-6">
+              <Button onClick={this.handleResetGuess} className="w-auto text-center bg-blue-500 text-white font-bold rounded px-4 py-2 m-2 focus:outline-none focus:shadow-outline">
+                  Next Word
+              </Button>
+              </div>
 
 
       </div>

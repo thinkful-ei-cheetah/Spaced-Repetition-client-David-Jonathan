@@ -22,7 +22,7 @@ class DashboardRoute extends Component {
     console.log(language, words);
     return (
       <section className="container mx-auto w-screen sm:w-3/4 md:w-1/2 xl:w-1/3 mt-4">
-        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <div className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
         <Language language={language}/>
         <Wordlist words={words}/>
         <Link className="text-center mt-6" to='/learn'>
