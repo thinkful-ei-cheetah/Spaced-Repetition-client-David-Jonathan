@@ -19,7 +19,7 @@ class DashboardRoute extends Component {
 
   render() {
     const { language, words = [] } = this.context;
-    console.log(language, words);
+    // console.log(language, words);
     return (
       <section className="container mx-auto w-11/12 sm:w-3/4 md:w-1/2 xl:w-1/3 mt-4">
         <div className="bg-white shadow-lg rounded px-4 sm:px-8 pt-6 pb-8 mb-4 flex flex-col">

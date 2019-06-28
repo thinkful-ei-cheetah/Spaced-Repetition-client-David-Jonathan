@@ -23,7 +23,7 @@ class LearningRoute extends Component {
 
   handleResetGuess()
   {
-    console.log('setting dummy to false and dummy2 to true')
+    // console.log('setting dummy to false and dummy2 to true')
     this.setState({
 
       displayguess: true,
@@ -54,7 +54,7 @@ class LearningRoute extends Component {
         this.setState({
           nextWord, wordCorrectCount, wordIncorrectCount, totalScore, answer, isCorrect
         });
-        console.log('setting dummy to true and dummy2 to false')
+        // console.log('setting dummy to true and dummy2 to false')
         this.setState({
           dummy: true,
           dummy2: false
