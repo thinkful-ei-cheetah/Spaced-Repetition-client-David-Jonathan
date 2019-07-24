@@ -1,5 +1,7 @@
 # Spaced Repetition Capstone
 
+## Made with love by David Nordeen and Jonathan Lassen
+
 ## Setup
 
 To setup the application
